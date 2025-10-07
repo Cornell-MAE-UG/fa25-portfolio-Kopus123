@@ -6,7 +6,7 @@ technologies: [Autodesk Fusion]
 image: /assets/images/RoverArmWireframe.jpg
 ---
 
-Over the summer of 2025, I decided to make a few projects to further my skills in the engineering field. One of such projects was my 5-DOF Rover Arm in Autodesk Fusion 360.
+Over the summer of 2025, I decided to make a few projects to further my skills in the engineering field. One such project was my 5-DOF Rover Arm in Autodesk Fusion 360.
 
 I chose a rover arm as the project because of my interest in aerospace engineering and eagerness to start excelling in the field. As implied, I started this project with no CAD experience whatsoever.
 
@@ -16,6 +16,6 @@ The Arm features a sturdy base to attach to the Rover, a base arm and forearm, a
 
 The following images are additional renderings of the arm from Fusion's 'Render' Workspace:
 
-/assets/images/RoverArmRender1.jpg
+![Arm Render 1](/assets/images/RoverArmRender1.jpg)
 
-/assets/images/RoverArmRender2.jpg
+![Arm Render 2](/assets/images/RoverArmRender2.jpg)

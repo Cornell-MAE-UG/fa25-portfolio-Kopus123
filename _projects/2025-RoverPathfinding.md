@@ -3,7 +3,7 @@ layout: project
 title: Rover Pathfinding Simulation
 description: Simulation using Dijkstra's Alogrithm
 technologies: [Python]
-image: /assets/images/function-graph.png
+#image: /assets/images/function-graph.png
 ---
 
 Over the summer of 2025, I decided to make a few projects to further my skills in the engineering field. One of these projects was designing a rover pathfinding simulation in Python. 

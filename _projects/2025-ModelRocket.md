@@ -3,7 +3,7 @@ layout: project
 title: Model Rocket Design
 description: A model rocket that I designed in OpenRocket
 technologies: [OpenRocket]
-image: /assets/images/spaceship-design.jpg
+image: /assets/images/Rocket-Design.jpg
 ---
 
 Over the summer of 2025, I decided to make a few projects to further my skills in the engineering field. One of these projects was designing a model rocket in OpenRocket software. 

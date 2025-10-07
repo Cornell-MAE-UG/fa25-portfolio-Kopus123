@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Ahmed Arif - Curriculum Vitae
-permalink: assets/cv/
+permalink: /cv/
 ---
 ## Curriculum Vitae
 

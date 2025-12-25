@@ -2,7 +2,7 @@
 
 Welcome to the source code for my professional portfolio. This site showcases my work in aerospace propulsion, robotics, and mechanical design.
 
-**Live Site:** https://github.com/Cornell-MAE-UG/fa25-portfolio-Kopus123.git
+**Live Site:** https://cornell-mae-ug.github.io/fa25-portfolio-Kopus123/
 
 ## About Me
 I am a Mechanical Engineering undergraduate at Cornell University (Class of 2028) intending a concentration in Aerospace Engineering. I currently work with the **Cornell Liquid Propulsion Club** and **Mars Rover Project Team**.

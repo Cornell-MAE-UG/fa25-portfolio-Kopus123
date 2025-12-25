@@ -200,4 +200,37 @@ footer {
   transform: translateX(-4px);
 }
 
+/* 1. Force the cards to line up */
+.project-card, 
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    vertical-align: top; /* Keeps them aligned in the row */
+}
 
+/* 2. FORCE all images to be the exact same size */
+.project-card img, 
+.gallery-item img {
+    width: 100%;         /* Fill the width of the card */
+    height: 200px;       /* FORCE a fixed height */
+    object-fit: cover;   /* Crops the image smartly so it doesn't look squished */
+    border-radius: 8px;  /* smooths the corners */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Adds a subtle pop */
+}
+
+/* 3. Reserve standard space for titles (2 lines max) */
+.project-card h3, 
+.project-title, 
+.gallery-item p {
+    height: 50px;        /* Fixed height: fits 2 lines of text exactly */
+    overflow: hidden;    /* If it's 3 lines, cut it off cleanly */
+    display: flex;
+    align-items: center; /* Centers text vertically */
+    justify-content: center;
+    margin-top: 10px;
+    line-height: 1.2;
+    text-align: center;
+    width: 100%;
+}

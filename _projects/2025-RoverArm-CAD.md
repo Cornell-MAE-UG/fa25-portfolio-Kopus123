@@ -16,6 +16,9 @@ The Arm features a sturdy base to attach to the Rover, a base arm and forearm, a
 
 The following images are additional renderings of the arm from Fusion's 'Render' Workspace:
 
-![Arm Render 1](/assets/images/RoverArmRender1.jpg)
+<!--![Arm Render 1](/assets/images/RoverArmRender1.jpg)-->
 
-![Arm Render 2](/assets/images/RoverArmRender2.jpg)
+<!--![Arm Render 2](/assets/images/RoverArmRender2.jpg)-->
+
+<p><img src="/fa25-portfolio-Kopus123/assets/images/RoverArmRender1.jpg" alt="Arm Render 1" /></p>
+<p><img src="/fa25-portfolio-Kopus123/assets/images/RoverArmRender2.jpg" alt="Arm Render 2" /></p>

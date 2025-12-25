@@ -13,5 +13,12 @@ I Designed two versions of a rocket (for normal conditions and windy conditions)
 The rocket features a secant ogive nose cone, a fiberglass body (comprised of two body tubes), a  parachute, Cesaroni Tech 3727L 1050-P motor, and trapezoidal fins. It also contains a launch lug to allow for a smooth takeoff, and tube coupler to join the two body tubes together, along with a payload of 1.5 kg, all joined together with a shock cord.
 Since OpenRocket lets the user design any rocket (even ones that don’t make physical sense), not only was this project a matter of trial and error (it mostly was not) it was a challenge to create a working rocket that would satisfy my goal while also being feasible in the real world.
 
+<div style="width: 100%; height: 460px; overflow: hidden; margin-bottom: 20px; border: 1px solid #eee;">
+    <img src="{{ '/assets/images/openrocketnormalwindsinfo-1.jpg' | relative_url }}" 
+         style="width: 100%; height: 100%; object-fit: cover; object-position: top; display: block;">
+</div>
 
-
+<div style="width: 100%; height: 630px; overflow: hidden; border: 1px solid #eee;">
+    <img src="{{ '/assets/images/openrocketnormalwindsinfo-2.jpg' | relative_url }}" 
+         style="width: 100%; height: 100%; object-fit: cover; object-position: top; display: block;">
+</div>

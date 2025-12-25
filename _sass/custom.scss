@@ -234,3 +234,21 @@ footer {
     text-align: center;
     width: 100%;
 }
+
+/* Specific size for the Profile Picture on the Home Page */
+img.profile-image {
+    width: 250px !important;   /* Set this to whatever size you liked before */
+    height: auto !important;
+    float: left;               /* This wraps the text around the photo */
+    margin-right: 20px;        /* Adds space between the photo and your bio */
+    margin-bottom: 10px;
+    border-radius: 10px;       /* Keeps it looking sharp */
+    max-width: 100%;           /* Safety for mobile screens */
+}
+
+/* Clear the float so the "Take a look at my projects" doesn't get stuck */
+.about-me-text::after {
+    content: "";
+    clear: both;
+    display: table;
+}

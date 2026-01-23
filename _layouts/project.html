@@ -10,6 +10,19 @@ layout: default
 
 <p><strong>Technologies Used</strong>: {{ page.technologies | join: ", " }}</p>
 
-<a href={{ "/projects/" | relative_url }} class="back-arrow">
-    <i class="bi bi-arrow-left-circle-fill"></i> Back to Projects
-</a>
+{% if page.path contains 'FEA' %}
+  {% assign back_link = '/analysis/fea/' %}
+  {% assign back_label = 'Back to FEA' %}
+{% elsif page.path contains 'CFD' %}
+  {% assign back_link = '/analysis/cfd/' %}
+  {% assign back_label = 'Back to CFD' %}
+{% else %}
+  {% assign back_link = '/projects/' %}
+  {% assign back_label = 'Back to Projects' %}
+{% endif %}
+
+<div class="mt-5">
+  <a href="{{ back_link | relative_url }}" class="back-arrow">
+    <i class="bi bi-arrow-left-circle-fill"></i> {{ back_label }}
+  </a>
+</div>

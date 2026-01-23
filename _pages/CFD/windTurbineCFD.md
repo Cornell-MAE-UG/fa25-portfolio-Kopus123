@@ -3,6 +3,7 @@ layout: project
 title: Wind Turbine CFD
 permalink: /analysis/WindTurbineCFD/
 description: "Aerodynamic optimization of a wind turbine blade."
+published: false
 ---
 
 **Objective:** Maximize lift-to-drag ratio on a horizontal axis turbine blade.

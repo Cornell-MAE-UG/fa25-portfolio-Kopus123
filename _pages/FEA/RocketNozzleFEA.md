@@ -50,7 +50,7 @@ The results revealed that after the third time step, there might come to be a ga
     <p style="margin-top: 8px; font-size: 0.85rem; opacity: 0.8;"><i>Total Deformation at t=1</i></p>
   </div>
   <div class="col-4 text-center">
-    <img src="{{ '/assets/images/Totaldeft2.jpg' | relative_url }}" class="img-fluid border rounded" style="height: 250px; width: 100%; object-fit: cover;">
+    <img src="{{ '/assets/images/TotalDeformationt2.jpg' | relative_url }}" class="img-fluid border rounded" style="height: 250px; width: 100%; object-fit: cover;">
     <p style="margin-top: 8px; font-size: 0.85rem; opacity: 0.8;"><i>Total Deformation at t=2</i></p>
   </div>
   <div class="col-4 text-center">

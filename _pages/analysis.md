@@ -23,6 +23,7 @@ permalink: /analysis/
         </div>
       </a>
     </div>
+    {% comment %}
     <div class="col-md-5 mb-5">
       <a href="{{ '/analysis/cfd/' | relative_url }}" class="text-decoration-none text-dark">
         <div class="simulation-card p-3">
@@ -37,6 +38,6 @@ permalink: /analysis/
         </div>
       </a>
     </div>
-
+    {% endcomment %}
   </div>
 </div>

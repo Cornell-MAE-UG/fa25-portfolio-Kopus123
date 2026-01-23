@@ -26,6 +26,8 @@ permalink: /analysis/fea/
         </div>
       </div>
     </a>
+
+    {% comment %}
     <a href="{{ '/analysis/WindTurbineFEA/' | relative_url }}" 
     class="list-group-item list-group-item-action d-flex align-items-center gap-3 p-3  rounded-3 ghost-card rounded-3">
       <img src="https://placehold.co/100?text=Turbine" alt="Turbine Struct" width="100" height="100" class="rounded-circle flex-shrink-0" style="object-fit: cover;">
@@ -36,6 +38,7 @@ permalink: /analysis/fea/
         </div>
       </div>
     </a>
+    {% endcomment %}
 
   <br>
   <a href="{{ "/analysis/" | relative_url }}" class="back-arrow">

@@ -252,3 +252,74 @@ img.profile-image {
     clear: both;
     display: table;
 }
+/* Simulation Page Styles */
+.simulation-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: transparent; /* Blends with cream background */
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-5px); /* Lift effect */
+  }
+
+  img {
+    width: 100%;           /* Force full width */
+    height: 300px;         /* Force a standard height for alignment */
+    object-fit: cover;     /* CROPS the image instead of squishing it */
+    
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover img {
+    opacity: 0.9;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  }
+
+  .arrow-link {
+    color: #333;
+    font-weight: 600;
+    text-decoration: none;
+    transition: margin-left 0.2s;
+
+    i {
+      margin-left: 5px;
+    }
+  }
+
+  &:hover .arrow-link {
+    margin-left: 5px; /* Slide effect */
+    color: #000;
+  }
+  /* Makes any card bounce up slightly on hover */
+}
+.hover-lift{
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px); /* Moves it UP by 5 pixels */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important; /* Makes the shadow deeper */
+}
+/* --- Ghost Card (The List Items) --- */
+.ghost-card {
+  background-color: transparent;       /* Invisible normally */
+  border: 1px solid transparent;       /* No border normally */
+  transition: all 0.3s ease;           
+}
+
+.ghost-card:hover {
+  /* CHANGE THE COLOR HERE vvv */
+  background-color: #89ddff;           /* Currently: Off-White/Cream */
+  
+  border-color: rgba(0,0,0,0.1);       
+  transform: translateY(-5px);         
+  box-shadow: 0 1rem 3rem rgba(0,0,0,0.15); 
+}
+/* Forces every header to start on a new, clean line */
+h3 {
+  clear: both;
+  padding-top: 10px; 
+}

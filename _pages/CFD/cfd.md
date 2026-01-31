@@ -2,7 +2,6 @@
 layout: default
 title: CFD Projects
 permalink: /analysis/cfd/
-published: false
 ---
 
 <div class="container">

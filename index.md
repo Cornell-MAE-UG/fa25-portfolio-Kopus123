@@ -3,7 +3,7 @@ layout: default
 title: Ahmed Arif
 ---
 
-# Ahmed Arif
+# About Me
 
 <table style="width: 100%; border: none; border-collapse: collapse; margin-bottom: 20px;">
   <tr style="border: none;">
@@ -19,9 +19,7 @@ title: Ahmed Arif
 </table>
 <div style="margin-top: 10px; padding: 10px; border-left: 4px solid #000; background-color: rgba(255, 255, 255, 0.3); border-radius: 0 8px 8px 0;">
   <p style="margin: 0; font-size: 0.95rem;">
-    <strong>Update:</strong> Currently developing advanced 
-    <strong>FEA</strong> and <strong>CFD</strong> simulation modules to showcase 
-    structural and fluid analysis projects (In Progress - Jan 2026).
+    <strong>Update:</strong> <strong>CFD</strong> and <strong>FEA</strong> sections have been released! I am currently working on developing more <strong>FEA</strong> projects, so stay tuned! (Feb 2026)
   </p>
 </div>
 

@@ -1,0 +1,115 @@
+<style>
+/* The Modal Background */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; 
+  z-index: 9999; /* Sit on top of everything */
+  padding-top: 0; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  justify-content: center;
+  align-items: center;
+}
+
+/* The Image Box */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: auto;
+  max-width: 90%;
+  max-height: 90vh;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+
+/* Animation */
+.modal-content {  
+  animation-name: zoom;
+  animation-duration: 0.3s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close-btn {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 1. Default: Allow zooming on images */
+img {
+  cursor: zoom-in;
+}
+
+/* 2. EXCEPTION: Images inside links (like your FEA/CFD Cards) */
+/* This ensures the mouse looks like a pointing hand, not a magnifying glass */
+a img {
+  cursor: pointer !important;
+}
+
+/* 3. EXCEPTION: The Profile Picture */
+/* Forces the standard arrow cursor */
+.profile-image, .sidebar img, .avatar {
+  cursor: default !important;
+}
+/* Force the enlarged image to have a normal arrow cursor */
+#modalImg {
+  cursor: default !important;
+}
+</style>
+
+<script>
+// Get the elements
+var modal = document.getElementById("imageModal");
+var modalImg = document.getElementById("modalImg");
+var span = document.getElementsByClassName("close-btn")[0];
+
+// 1. OPEN LOGIC: Find all images and make them clickable
+var images = document.querySelectorAll('img');
+images.forEach(function(img) {
+  // Skip profile pic and the modal image itself
+  if (img.classList.contains('profile-image')) return;
+  if (img.id === 'modalImg') return;
+
+  img.onclick = function(){
+    modal.style.display = "flex"; // Shows the modal
+    modalImg.src = this.src;      // Puts the image inside
+  }
+});
+
+// 2. CLOSE LOGIC: Click the X to close
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+
+// 3. SMART BACKGROUND CLOSE
+// This detects exactly what you clicked.
+modal.onclick = function(event) {
+  // If you clicked the black background (modal), CLOSE it.
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+  // If you clicked the image (event.target === modalImg), do NOTHING.
+}
+</script>

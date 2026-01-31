@@ -26,10 +26,9 @@ permalink: /analysis/fea/
         </div>
       </div>
     </a>
-    {% comment %}
     <a href="{{ '/analysis/WindTurbineFEA/' | relative_url }}" 
     class="list-group-item list-group-item-action d-flex align-items-center gap-3 p-3  rounded-3 ghost-card rounded-3">
-      <img src="https://placehold.co/100?text=Turbine" alt="Turbine Struct" width="100" height="100" class="rounded-circle flex-shrink-0" style="object-fit: cover;">
+      <img src="{{ '/assets/images/TurbineFEACover.jpg' | relative_url }}" alt="Turbine Struct" width="100" height="100" class="rounded-circle flex-shrink-0" style="object-fit: cover;">
       <div class="d-flex gap-2 w-100 justify-content-between">
         <div>
           <h5 class="mb-0">Wind Turbine FEA</h5>
@@ -37,7 +36,6 @@ permalink: /analysis/fea/
         </div>
       </div>
     </a>
-    {% endcomment %}
     
 
   <br>

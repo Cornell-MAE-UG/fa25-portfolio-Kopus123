@@ -18,7 +18,17 @@ title: Ahmed Arif
     </td>
   </tr>
 </table>
+<div class="alert alert-light border-0 shadow-sm d-flex align-items-center p-3 mb-4" style="background: #ced0d4; border-left: 4px solid #0d6efd !important;">
+  <div class="spinner-grow spinner-grow-sm text-primary me-3" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <div>
+    <span class="fw-bold">Currently Working On:</span> 
+    Cold-flow CFD analysis for the Ursa Lander's injector (ANSYS Fluent).
+  </div>
+</div>
 {% comment %}
+<!-- This is the old update strip but i like the new one better-->
 <div style="margin-top: 10px; padding: 10px; border-left: 4px solid #000; background-color: rgba(255, 255, 255, 0.3); border-radius: 0 8px 8px 0;">
   <p style="margin: 0; font-size: 0.95rem;">
     <strong>Update:</strong> <strong>CFD</strong> and <strong>FEA</strong> sections have been released! I am currently working on developing more <strong>FEA</strong> projects, so stay tuned! (Feb 2026)

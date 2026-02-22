@@ -18,7 +18,7 @@ title: Ahmed Arif
     </td>
   </tr>
 </table>
-<div class="alert alert-light border-0 shadow-sm d-flex align-items-center p-3 mb-4" style="background: #ced0d4; border-left: 4px solid #0d6efd !important;">
+<div class="alert alert-light border-0 shadow-sm d-flex align-items-center p-3 mb-4" style="background: #e9e9e9; border-left: 4px solid #0d6efd !important;">
   <div class="spinner-grow spinner-grow-sm text-primary me-3" role="status">
     <span class="visually-hidden">Loading...</span>
   </div>

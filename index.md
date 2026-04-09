@@ -23,8 +23,11 @@ title: Ahmed Arif
     <span class="visually-hidden">Loading...</span>
   </div>
   <div>
+    <span class="fw-bold">Currently Integrating Into Site:</span> 
+    Cold-flow CFD analysis for the Ursa I's injector (ANSYS Fluent)
+    <br>
     <span class="fw-bold">Currently Working On:</span> 
-    Cold-flow CFD analysis for the Ursa Lander's injector (ANSYS Fluent).
+    Multiphase simulation of Ursa I's injector, including Nitrous Oxide and Ethanol as the phases
   </div>
 </div>
 {% comment %}

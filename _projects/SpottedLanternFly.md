@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Spotted Lanternfly Net Harvest System (MAE 2250)
+title: Spotted Lanternfly Net Harvest System (MAE 2250, old)
 description: Client Outline and Pitch 
 image: /assets/images/SLF.jpg
 ---

@@ -10,6 +10,24 @@ permalink: /analysis/fea/
   <hr>
 
   <div class="d-flex flex-column gap-3">
+  {%comment%}
+  <a href="{{ '/analysis/RocketFEA/' | relative_url }}" 
+   class="list-group-item list-group-item-action d-flex align-items-center gap-3 p-3 rounded-3 ghost-card">
+  <img 
+  src="{{ '/assets/images/RocketFEA.jpg' | relative_url }}" 
+  alt="5kN Rocket FEA" 
+  width="100" 
+  height="100" 
+  class="rounded-circle flex-shrink-0"
+  style="object-fit: cover;">
+  <div class="d-flex gap-2 w-100 justify-content-between">
+    <div>
+      <h5 class="mb-0">5kN Rocket Structural FEA</h5>
+      <p class="mb-0 opacity-75">Finite Element Analysis and structural validation of 5kN rocket components to verify structural integrity and factors of safety.</p>
+    </div>
+  </div>
+</a>
+{%endcomment%}
     <a href="{{ '/analysis/RocketNozzleFEA/' | relative_url }}" 
     class="list-group-item list-group-item-action d-flex align-items-center gap-3 p-3 rounded-3 ghost-card rounded-3">
       <img 

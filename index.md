@@ -13,7 +13,7 @@ title: Ahmed Arif
            class = "profile-image">
     </td>
     <td style="vertical-align: top; border: none; padding-left: 20px;">
-      My name is Ahmed Arif, and I am currently a Mechanical Engineering student at Cornell University (class of 2028). I am currently part of the Liquid Propulsion Club at Cornell and the Mars Rover project team. I have created various projects in the teams that I am part of, and also individually over the summer of 2025, all of which can be seen in the projects section. Currently, I am focusing on advanced FEA and CFD simulations to validate structural and fluid systems.
+      My name is Ahmed Arif, and I am currently a Mechanical Engineering student at Cornell University (class of 2028). I am currently part of the Liquid Propulsion Club at Cornell and the Mars Rover project team. I have created various projects in the teams that I am part of, and also individually over the summer of 2025, all of which can be seen in the projects section. Currently over the summer of 2026, I am focusing on advanced FEA and CFD simulations to validate structural and fluid systems, and am designing my own 5 kN rocket engine over.
       <br><br>
     </td>
   </tr>
@@ -24,10 +24,10 @@ title: Ahmed Arif
   </div>
   <div>
     <span class="fw-bold">Currently Integrating Into Site:</span> 
-    Cold-flow CFD analysis for the Ursa I's injector (ANSYS Fluent)
+    3D 3-phase injector simulation setup and domain verification details
     <br>
     <span class="fw-bold">Currently Working On:</span> 
-    Multiphase simulation of Ursa I's injector, including Nitrous Oxide and Ethanol as the phases
+    3D multiphase transient simulation of the Ursa I injector, modeling Water, Ethanol, and Air
   </div>
 </div>
 {% comment %}

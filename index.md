@@ -24,10 +24,10 @@ title: Ahmed Arif
   </div>
   <div>
     <span class="fw-bold">Currently Integrating Into Site:</span> 
-    3D 3-phase injector simulation setup and domain verification details
+    Personal LOX/RP-1 rocket engine project, 3D 3-phase injector simulation setup and domain verification details
     <br>
     <span class="fw-bold">Currently Working On:</span> 
-    3D multiphase transient simulation of the Ursa I injector, modeling Water, Ethanol, and Air
+    3D VOF-to-DPM of my personal rocket engine, modeling liquid oxygen, RP-1, and air
   </div>
 </div>
 {% comment %}

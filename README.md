@@ -10,9 +10,8 @@ I am a Mechanical Engineering undergraduate at Cornell University (Class of 2028
 ## Technical Highlights
 * **Languages & Tools:** Python, MATLAB, ANSYS, Fusion 360, OpenRocket.
 * **Key Projects:**
-    * **Ursa Lander Engine:** Regenerative cooling analysis for a 500 N bipropellant rocket engine.
-    * **Mars Rover Gimbal:** Design and manufacturing of a 2-DOF camera system.
-    * **5-DOF Robotic Arm:** Full CAD design (a project I made to introduce myself into both CAD and mechanical design).
+    * **5 kN LOX/RP-1 Engine:** Full thrust chamber and injector design — regenerative/film cooling analysis, unlike-triplet injector sizing, and CFD validation (Fluent, RPA).
+    * **Ursa I Engine (LPC):** CFD simulations for the club's 500 N bipropellant rocket engine.
 
 ## Contact
 * **Email:** 2006aarifsa@gmail.com

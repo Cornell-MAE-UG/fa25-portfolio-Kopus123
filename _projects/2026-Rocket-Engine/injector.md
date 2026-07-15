@@ -72,15 +72,15 @@ technologies: [Autodesk Fusion 360, Ansys Fluent, Ansys Fluent Meshing, SpaceCla
   <div style="display: flex; gap: 20px; margin-bottom: 40px; flex-wrap: wrap; justify-content: center;">
     <div style="flex: 1; min-width: 300px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
       <img src="{{ '/assets/images/RocketEngine/inj-render.png' | relative_url }}" alt="Injector Render" style="width: 100%; display: block;" />
-      <p style="text-align: center; font-size: 0.9rem; padding: 10px; margin: 0; background: #f9f9f9;"><strong>Fig 1:</strong> Full Injector Render</p>
+      <p style="text-align: center; font-size: 0.9rem; padding: 10px; margin: 0; background: #f9f9f9;">Full Injector Render</p>
     </div>
     <div style="flex: 1; min-width: 300px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
       <img src="{{ '/assets/images/RocketEngine/inj-faceplate.png' | relative_url }}" alt="Injector Faceplate" style="width: 100%; display: block;" />
-      <p style="text-align: center; font-size: 0.9rem; padding: 10px; margin: 0; background: #f9f9f9;"><strong>Fig 2:</strong> Injector Faceplate</p>
+      <p style="text-align: center; font-size: 0.9rem; padding: 10px; margin: 0; background: #f9f9f9;">Injector Faceplate</p>
     </div>
     <div style="flex: 1; min-width: 300px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
       <img src="{{ '/assets/images/RocketEngine/inj-cross-sec.png' | relative_url }}" alt="Injector Cross Section" style="width: 100%; display: block;" />
-      <p style="text-align: center; font-size: 0.9rem; padding: 10px; margin: 0; background: #f9f9f9;"><strong>Fig 3:</strong> Injector Cross Section</p>
+      <p style="text-align: center; font-size: 0.9rem; padding: 10px; margin: 0; background: #f9f9f9;">Injector Cross Section</p>
     </div>
   </div>
 
@@ -101,26 +101,22 @@ technologies: [Autodesk Fusion 360, Ansys Fluent, Ansys Fluent Meshing, SpaceCla
     </ul>
 
   <div class="d-flex flex-wrap justify-content-center gap-4 mt-3 mb-5">
-  
-  <div style="width: 28%; min-width: 220px; text-align: center;">
-    <img src="{{ '/assets/images/RocketEngine/full-mesh.png' | relative_url }}" class="img-fluid border rounded" style="height: 220px; width: 100%; object-fit: cover;" alt="Periodic Injector Mesh">
-    <p style="font-size: 0.9rem; margin-top: 10px; margin-bottom: 0;"><strong>Fig 4:</strong>Injector Mesh</p>
+    <div style="width: 28%; min-width: 220px; text-align: center;">
+      <img src="{{ '/assets/images/RocketEngine/full-mesh.png' | relative_url }}" class="img-fluid border rounded" style="height: 220px; width: 100%; object-fit: cover;" alt="Periodic Injector Mesh">
+      <p style="font-size: 0.9rem; margin-top: 10px; margin-bottom: 0;">Injector Mesh</p>
+    </div>
+    
+    <div style="width: 28%; min-width: 220px; text-align: center;">
+      <img src="{{ '/assets/images/RocketEngine/lox-bls.png' | relative_url }}" class="img-fluid border rounded" style="height: 220px; width: 100%; object-fit: cover;" alt="LOX Orifice Boundary Layers">
+      <p style="font-size: 0.9rem; margin-top: 10px; margin-bottom: 0;">LOX Orifice Boundary Layers</p>
+    </div>
+    
+    <div style="width: 28%; min-width: 220px; text-align: center;">
+      <img src="{{ '/assets/images/RocketEngine/rp1-bls.png' | relative_url }}" class="img-fluid border rounded" style="height: 220px; width: 100%; object-fit: cover;" alt="RP-1 Orifice Boundary Layers">
+      <p style="font-size: 0.9rem; margin-top: 10px; margin-bottom: 0;">RP-1 Orifice Boundary Layers</p>
+    </div>
   </div>
-  
-  <div style="width: 28%; min-width: 220px; text-align: center;">
-    <img src="{{ '/assets/images/RocketEngine/lox-bls.png' | relative_url }}" class="img-fluid border rounded" style="height: 220px; width: 100%; object-fit: cover;" alt="LOX Orifice Boundary Layers">
-    <p style="font-size: 0.9rem; margin-top: 10px; margin-bottom: 0;"><strong>Fig 5:</strong> LOX Orifice Boundary Layers</p>
-  </div>
-  
-  <div style="width: 28%; min-width: 220px; text-align: center;">
-    <img src="{{ '/assets/images/RocketEngine/rp1-bls.png' | relative_url }}" class="img-fluid border rounded" style="height: 220px; width: 100%; object-fit: cover;" alt="RP-1 Orifice Boundary Layers">
-    <p style="font-size: 0.9rem; margin-top: 10px; margin-bottom: 0;"><strong>Fig 6:</strong> RP-1 Orifice Boundary Layers</p>
-  </div>
 
-
-
-
-</div>
 <h4>ii. Setup</h4>
   <ul style="margin-bottom: 30px;">
     <li><strong>Model:</strong> VOF-to-DPM (Volume of Fluid to Discrete Phase Model) transition to accurately capture primary jet breakup and secondary droplet atomization while lowering computational costs.</li>
@@ -129,25 +125,28 @@ technologies: [Autodesk Fusion 360, Ansys Fluent, Ansys Fluent Meshing, SpaceCla
     <li><strong>Outlet: </strong>The outlet was in the chamber, so it was set to a 400 psi pressure outlet</li>
   </ul>
 
-  <div style="display: flex; gap: 20px; margin-bottom: 20px; flex-wrap: wrap; justify-content: center;">
-    <div style="flex: 1; min-width: 45%; border: 1px solid #ddd; border-radius: 8px; overflow: hidden;">
-      <img src="{{ '/assets/images/RocketEngine/inj-vol-frac.png' | relative_url }}" alt="Volume Fraction" style="width: 100%; display: block;" />
-      <p style="text-align: center; font-size: 0.9rem; padding: 10px; margin: 0; background: #f9f9f9;"><strong>Fig 4:</strong> VOF Phase Tracking</p>
+  <div class="row mt-3 mb-5">
+    
+    <div class="col-6 mb-4 text-center">
+      <img src="{{ '/assets/images/RocketEngine/inj-vol-frac.png' | relative_url }}" class="img-fluid border rounded" style="width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; cursor: zoom-in;" alt="Volume Fraction">
+      <p style="font-size: 0.9rem; margin-top: 10px; margin-bottom: 0;">VOF Phase Tracking</p>
     </div>
-    <div style="flex: 1; min-width: 45%; border: 1px solid #ddd; border-radius: 8px; overflow: hidden;">
-      <img src="{{ '/assets/images/RocketEngine/inj-vel-vol-rndr.png' | relative_url }}" alt="Velocity Volume Render" style="width: 100%; display: block;" />
-      <p style="text-align: center; font-size: 0.9rem; padding: 10px; margin: 0; background: #f9f9f9;"><strong>Fig 5:</strong> Velocity Magnitude (Volume Render)</p>
+    
+    <div class="col-6 mb-4 text-center">
+      <img src="{{ '/assets/images/RocketEngine/inj-vel-vol-rndr.png' | relative_url }}" class="img-fluid border rounded" style="width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; cursor: zoom-in;" alt="Velocity Volume Render">
+      <p style="font-size: 0.9rem; margin-top: 10px; margin-bottom: 0;">Velocity Magnitude</p>
     </div>
-  </div>
-  <div style="display: flex; gap: 20px; margin-bottom: 40px; flex-wrap: wrap; justify-content: center;">
-    <div style="flex: 1; min-width: 45%; border: 1px solid #ddd; border-radius: 8px; overflow: hidden;">
-      <img src="{{ '/assets/images/RocketEngine/inj-vel-vec.png' | relative_url }}" alt="Velocity Vectors" style="width: 100%; display: block;" />
-      <p style="text-align: center; font-size: 0.9rem; padding: 10px; margin: 0; background: #f9f9f9;"><strong>Fig 6:</strong> Velocity Vectors & Recirculation</p>
+
+    <div class="col-6 mb-4 text-center">
+      <img src="{{ '/assets/images/RocketEngine/inj-vel-vec.png' | relative_url }}" class="img-fluid border rounded" style="width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; cursor: zoom-in;" alt="Velocity Vectors">
+      <p style="font-size: 0.9rem; margin-top: 10px; margin-bottom: 0;">Velocity Vectors & Recirculation</p>
     </div>
-    <div style="flex: 1; min-width: 45%; border: 1px solid #ddd; border-radius: 8px; overflow: hidden;">
-      <img src="{{ '/assets/images/RocketEngine/inj-pres-vol-rndr.png' | relative_url }}" alt="Pressure Volume Render" style="width: 100%; display: block;" />
-      <p style="text-align: center; font-size: 0.9rem; padding: 10px; margin: 0; background: #f9f9f9;"><strong>Fig 7:</strong> Manifold Pressure Distribution</p>
+    
+    <div class="col-6 mb-4 text-center">
+      <img src="{{ '/assets/images/RocketEngine/inj-pres-vol-rndr.png' | relative_url }}" class="img-fluid border rounded" style="width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; cursor: zoom-in;" alt="Pressure Volume Render">
+      <p style="font-size: 0.9rem; margin-top: 10px; margin-bottom: 0;">Manifold Pressure Distribution</p>
     </div>
+
   </div>
 
 
@@ -160,11 +159,12 @@ technologies: [Autodesk Fusion 360, Ansys Fluent, Ansys Fluent Meshing, SpaceCla
     <li><strong>Velocities:</strong> Velocity volume renderings and vectors show that the speed inside the orifices were faster than normal (around 50 m/s in the orifices compared to the calculated ~30 m/s), which I think could be a result of 1) no AMR and 2) a high gradient between the air and propellant phases (causes a large velocity artifact for the air phase, which in turn causes a higher mass flow and velocity for propellant phases)
       <ul>
       <li>I have seen in previous simulations air artifact velocity being extrordinarily high (1200+ m/s), causing propellants in the orifices to reach speeds of over 100 m/s, but I presume, due to my boundary layers with an estimate of y+ = 30, the solver was able to capture more of the physics accurately and did not produce absurdly large velocity artifacts, though there is room for improvement in this simulation</li></ul></li>
-    <li><strong>Pressure:</strong> The pressure volume render (Fig 7) shows an odd distribution of pressure, with a large pressure gradient at the inlet and virtually no pressure gradient elsewhere, leaving no pressure drop across the orifices. This is undoubtedly caused by the lack of manifolds in the geometry, and in my next simulation I will model the volume of the manifolds as well to acquire an accurate simulation.</li>
+    <li><strong>Pressure:</strong> The pressure volume render shows an odd distribution of pressure, with a large pressure gradient at the inlet and virtually no pressure gradient elsewhere, leaving no pressure drop across the orifices. This is undoubtedly caused by the lack of manifolds in the geometry, and in my next simulation I will model the volume of the manifolds as well to acquire an accurate simulation.</li>
   </ul>
   <p style = "margin-bottom:25px"><strong>A new simulation simulating the entire injector geometry (not just the faceplate, and not periodic) is coming soon to properly validate the design of the injector</strong></p>
 
 </div>
+
 <style>
   #modalImg {
     width: auto !important;

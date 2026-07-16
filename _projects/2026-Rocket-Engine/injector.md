@@ -42,7 +42,7 @@ technologies: [Autodesk Fusion 360, Ansys Fluent, Ansys Fluent Meshing, SpaceCla
   <ul style="margin-bottom: 30px;">
     <li><strong>Propellants:</strong> LOX/RP-1</li>
     <li><strong>Target O/F Ratio:</strong>2.4</li>
-    <li><strong>Total Mass Flow:</strong>1.884 kg/s (LOX: 1.33 kg/s, RP-1: .554 kg/s (15% to film cooling)</li>
+    <li><strong>Total Mass Flow:</strong>1.884 kg/s (LOX: 1.33 kg/s, RP-1: .554 kg/s (15% to film cooling))</li>
     <li><strong>Element Type:</strong> Unlike Triplets</li>
     <li><strong>Impingement Angle:</strong> 45 degrees designed to optimize the momentum ratio and distance from injector faceplate; -5 degree beta angle (towards the combustion chamber axis) to keep impingement far from chamber walls</li>
     <li><strong>Pressure Drop (ΔP):</strong> Designed for a 689476 Pa pressure drop (25% of chamber pressure) across the injector face to guarantee sufficient velocities through orifices</li>
@@ -54,7 +54,7 @@ technologies: [Autodesk Fusion 360, Ansys Fluent, Ansys Fluent Meshing, SpaceCla
     <li>18 <strong>unlike triplet elements</strong> to allow for proper mixing and reasonable orifice diameters
       <ul><li>Chosen over doublets for safer impingement behavior (product travels downstream rather than requiring precise momentum balancing)</li>
       <li>Chosen over quads/pentads to keep orifice diameters ≥1mm for manufacturability</li>
-      <li><strong>Beta angle of -5 degrees</strong> to accomodate for the cryogenic propellant LOX spray after entering combustion chamber</li>
+      <li><strong>Beta angle of -5 degrees</strong> to accommodate for the cryogenic propellant LOX spray after entering combustion chamber</li>
       </ul></li>
     <li><strong>Film cooling holes</strong> (RP-1) near chamber walls allows for proper cooling
       <ul><li>RPA analysis and conjugate heat transfer (CHT) CFD analysis confirmed that regenerative cooling alone will likely not be enough to keep the chamber from melting (temps exceeding 1000K throughout the chamber and nozzle)</li>
@@ -63,7 +63,7 @@ technologies: [Autodesk Fusion 360, Ansys Fluent, Ansys Fluent Meshing, SpaceCla
     <li>RP-1 manifold near the faceplate (inlet through regen cooling channels) with O-ring groove to prevent leakage</li>
     <li>LOX <strong>dome manifold</strong> near the top
       <ul>
-        <li>Distribution plate (seem like rectangular bars in the dome manifold cross section) to allow for more even flow through all orifices, as per suggestion from NASA SP8089</li>
+        <li>Distribution plate (which look like rectangular bars in the dome manifold cross section) to allow for more even flow through all orifices, as per suggestion from NASA SP8089</li>
         <li>Upstream to prevent heat transfer from the hotter RP-1 entering after cooling the chamber and nozzle (which would cause phase change), and to prevent any mixing with the RP-1, which might cause unwanted combustion</li>
       </ul></li>
     <li>Made with <strong>Inconel 718</strong> due to its exceptional aerospace applications and thermal resistance</li>
@@ -95,7 +95,7 @@ technologies: [Autodesk Fusion 360, Ansys Fluent, Ansys Fluent Meshing, SpaceCla
   <h4>i. Mesh</h4>
     <ul>
       <li>Due to lack of computational power (no supercomputers available) a relatively coarse mesh with boundary layers in the orifices were used</li>
-      <li>Automatic mesh adaption (AMR) was not used due to its unrealiable integration with periodic boundaries in ANSYS Fluent
+      <li>Automatic mesh adaption (AMR) was not used due to its unreliable integration with periodic boundaries in ANSYS Fluent
         <ul><li>AMR usually causes left-handed faced cells and cells with negative volume if ran with periodic boundaries, so I am currently working on a full injector model to utilize AMR</li></ul></li>
       <li>A polyhedral mesh was used in this run, but for future runs I will utilize a poly-hexcore mesh</li>
     </ul>
@@ -158,7 +158,7 @@ technologies: [Autodesk Fusion 360, Ansys Fluent, Ansys Fluent Meshing, SpaceCla
     <li><strong>Atomization Quality:</strong> The VOF-to-DPM simulation did characterize impingement going along the axis of the chamber, but due to the coarse mesh, none of it was converted into particles for the DPM. This did not produce incorrect results for the impingement, but the coarse mesh likely reduced accuracy but increased computation time.</li>
     <li><strong>Velocities:</strong> Velocity volume renderings and vectors show that the speed inside the orifices were faster than normal (around 50 m/s in the orifices compared to the calculated ~30 m/s), which I think could be a result of 1) no AMR and 2) a high gradient between the air and propellant phases (causes a large velocity artifact for the air phase, which in turn causes a higher mass flow and velocity for propellant phases)
       <ul>
-      <li>I have seen in previous simulations air artifact velocity being extrordinarily high (1200+ m/s), causing propellants in the orifices to reach speeds of over 100 m/s, but I presume, due to my boundary layers with an estimate of y+ = 30, the solver was able to capture more of the physics accurately and did not produce absurdly large velocity artifacts, though there is room for improvement in this simulation</li></ul></li>
+      <li>I have seen in previous simulations air artifact velocity being extraordinarily high (1200+ m/s), causing propellants in the orifices to reach speeds of over 100 m/s, but I presume, due to my boundary layers with an estimate of y+ = 30, the solver was able to capture more of the physics accurately and did not produce absurdly large velocity artifacts, though there is room for improvement in this simulation</li></ul></li>
     <li><strong>Pressure:</strong> The pressure volume render shows an odd distribution of pressure, with a large pressure gradient at the inlet and virtually no pressure gradient elsewhere, leaving no pressure drop across the orifices. This is undoubtedly caused by the lack of manifolds in the geometry, and in my next simulation I will model the volume of the manifolds as well to acquire an accurate simulation.</li>
   </ul>
   <p style = "margin-bottom:25px"><strong>A new simulation simulating the entire injector geometry (not just the faceplate, and not periodic) is coming soon to properly validate the design of the injector</strong></p>

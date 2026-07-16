@@ -45,7 +45,7 @@ technologies: [Autodesk Fusion 360, ANSYS Fluent, SpaceClaim, RPA, NASA CEA]
   </p>
   
   <ul style="margin-bottom: 30px;">
-    <li><strong>Chamber Pressure (Pc):</strong> 2758000 Pa (400 Psi)</li>
+    <li><strong>Chamber Pressure (Pc):</strong> 2758000 Pa (400 psi)</li>
     <li><strong>Characteristic Length (L*):</strong> 1.1 m sized to ensure complete residence time and vaporization for RP-1.</li>
     <li><strong>Expansion Ratio (ε):</strong> 4.9</li>
     <li><strong>Throat Diameter:</strong> 39.4 mm (Area: 12.22 cm²) &nbsp;|&nbsp; <strong>Chamber Diameter:</strong> 73.8 mm &nbsp;|&nbsp; <strong>Total Length:</strong> 406 mm</li>

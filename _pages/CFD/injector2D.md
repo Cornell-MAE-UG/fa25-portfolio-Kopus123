@@ -52,7 +52,7 @@ technologies: [Spaceclaim, ANSYS Mechanical, ANSYS Fluent, ANSYS CFD-Post]
   <ul>
     <li>Planar model in 2D space with a depth of 1m (to simplify hand calcualtions)</li>
     <li>Uses the pressure based transient solver due to the initial conditions changing the outcome of the final solution</li>
-    <li>Used mass flow inlets scaled with the 1m depth of the Fluent solver in 2D and utilized a pressure outlet at 0 Pa gauge pressure to simulate the ambient enviornment
+    <li>Used mass flow inlets scaled with the 1m depth of the Fluent solver in 2D and utilized a pressure outlet at 0 Pa gauge pressure to simulate the ambient environment
       <ul>
         <li>A mass flow inlet is used here due to the solver's extrusion of the geometry by 1 meter. A pressure inlet, though more realistic in the real world, would have caused an unreasonably high velocity and mass flow rate for the injector, which it is not designed for. This will be elaborated more on in the results section</li>
       </ul>

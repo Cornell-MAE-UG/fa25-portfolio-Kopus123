@@ -16,14 +16,15 @@ current: true
 </div>
 
 <style>
-  /* Centers the default Jekyll page title */
+  /* Center title */
   h1 {
     text-align: center;
     margin-bottom: 25px;
   }
 
-  /* Centers page images without touching the zoom modal image */
-  img:not([style]):not(#modalImg):not(.modal-content) {
+  /* Scope main content images specifically so modals are never touched */
+  .container img:not(.modal-content),
+  .post-content img:not(#modalImg) {
     display: block;
     margin: 0 auto 40px auto;
     max-width: 600px;

@@ -22,12 +22,13 @@ current: true
     margin-bottom: 25px;
   }
 
-  /* Centers the auto-injected layout image without breaking our custom grid */
-  img:not([style]) {
+  /* Centers page images without touching the zoom modal image */
+  img:not([style]):not(#modalImg):not(.modal-content) {
     display: block;
     margin: 0 auto 40px auto;
     max-width: 600px;
     width: 100%;
+    height: auto;
   }
 </style>
 
@@ -51,7 +52,7 @@ current: true
 </ul>
 
 <div class="row mt-3 mb-5 justify-content-center">
-  <div class="col-md-6 col-12 mb-4 text-center">
+  <div class="col-md-6 col-12 mb-4 text-center" style = "">
       <img src="{{ '/assets/images/EndEffector/RealRP.jpg' | relative_url }}" class="img-fluid border rounded" style="width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; cursor: zoom-in;" alt="Rack and Pinion">
     <p style="text-align: center; font-size: 0.9rem; padding: 10px; margin: 0; background: #f9f9f9;">Rack and Pinion Mechanism</p>
   </div>

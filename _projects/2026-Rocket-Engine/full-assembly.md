@@ -4,6 +4,7 @@ title: Rocket Engine Integration/Assembly
 permalink: /projects/2026-Rocket-Engine/full-assembly/
 technologies: [Autodesk Fusion 360, Ansys Fluent, Ansys Fluent Meshing, SpaceClaim, Research Papers (Sp-125, sp8089, etc.), Google Sheets]
 image: /assets/images/RocketEngine/Inj&CC.png
+current: true
 ---
 
 <div style="text-align: center; padding-bottom: 25px">
@@ -68,10 +69,10 @@ image: /assets/images/RocketEngine/Inj&CC.png
   </div>
 
   <h3 style="color: #000000; font-weight: 800; font-size: 1.5rem; margin-bottom: 15px; padding-bottom: 5px;">
-    2. Regenerative Fluid Routing
+    2. Regenerative Cooling
   </h3>
   <p>
-    The RP-1 routing eliminates the need for complex external hardlines by leveraging a continuous internal flow path driven by the system's inherent pressure differentials.
+    The RP-1 fueled regnerative cooling ensures the chamber remains cool enough during the specified burn duration.
   </p>
   <ul style="margin-bottom: 30px;">
     <li><strong>Counter-Flow Path:</strong> The RP-1 is injected at its highest pressure at the end of the converging-diverging nozzle. As it absorbs heat and expands through the counter-flow regenerative channels, the natural pressure gradient forces the fuel upward directly into the injector RP-1 manifold, priming it for entrance into the impingement orifices.</li>
@@ -84,8 +85,9 @@ image: /assets/images/RocketEngine/Inj&CC.png
     When the primary thermodynamic and fluid routing architectures are completed, the design focus will shift toward the ignition system and test stand integration.
   </p>
   <ul style="margin-bottom: 50px;">
-    <li><strong>Ignition method:</strong> An Augmented Spark Igniter (ASI) is currently the leading candidate for engine startup. The ASI will be integrated directly into the center of the injector faceplate once the thermal and spatial clearances are finalized.</li>
+    <li><strong>Ignition method:</strong> An Augmented Spark Igniter (ASI) has been selected for engine startup. The ASI housing has been included in the injector, but the ASI itself is still undergoing design</li>
     <li><strong>Test Stand Hardpoints & Instrumentation:</strong> The next design will introduce structural revisions to allow for test stand mounting, alongside dedicated instrumentation taps (static pressure transducers and thermocouples) along the chamber walls.</li>
+    <li>The plumbing system and specific pressurant tanks myst also be finalized</li>
   </ul>
 
 </div> <style>

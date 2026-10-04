@@ -80,36 +80,42 @@ a img {
 </style>
 
 <script>
-// Get the elements
-var modal = document.getElementById("imageModal");
-var modalImg = document.getElementById("modalImg");
-var span = document.getElementsByClassName("close-btn")[0];
+document.addEventListener("DOMContentLoaded", function() {
+  var modal = document.getElementById("imageModal");
+  var modalImg = document.getElementById("modalImg");
+  var span = document.getElementsByClassName("close-btn")[0];
 
-// 1. OPEN LOGIC: Find all images and make them clickable
-var images = document.querySelectorAll('img');
-images.forEach(function(img) {
-  // Skip profile pic and the modal image itself
-  if (img.classList.contains('profile-image')) return;
-  if (img.id === 'modalImg') return;
+  if (!modal || !modalImg) return;
 
-  img.onclick = function(){
-    modal.style.display = "flex"; // Shows the modal
-    modalImg.src = this.src;      // Puts the image inside
+  // OPEN LOGIC: Find all images and make them clickable
+  var images = document.querySelectorAll('img');
+  images.forEach(function(img) {
+    // Skip profile pic and the modal image itself
+    if (img.classList.contains('profile-image')) return;
+    if (img.id === 'modalImg') return;
+
+    img.onclick = function(e) {
+      // Prevents link navigation if image is wrapped in <a> tag
+      if (img.parentElement.tagName === 'A') {
+        e.preventDefault();
+      }
+      modal.style.display = "flex";
+      modalImg.src = this.src;
+    }
+  });
+
+  // CLOSE LOGIC: Click the X to close
+  if (span) {
+    span.onclick = function() { 
+      modal.style.display = "none";
+    }
+  }
+
+  // SMART BACKGROUND CLOSE
+  modal.onclick = function(event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
   }
 });
-
-// 2. CLOSE LOGIC: Click the X to close
-span.onclick = function() { 
-  modal.style.display = "none";
-}
-
-// 3. SMART BACKGROUND CLOSE
-// This detects exactly what you clicked.
-modal.onclick = function(event) {
-  // If you clicked the black background (modal), CLOSE it.
-  if (event.target === modal) {
-    modal.style.display = "none";
-  }
-  // If you clicked the image (event.target === modalImg), do NOTHING.
-}
 </script>

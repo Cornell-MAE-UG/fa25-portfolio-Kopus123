@@ -2,11 +2,61 @@
 layout: default
 title: Ahmed Arif - Portfolio
 permalink: /projects/
+excerpt_separator: ""
 ---
 
 <!-- Clear any rogue layout floats from the header -->
 <div style="clear: both;"></div>
 
+<!-- CURRENT PROJECTS GRID -->
+<div style="width: 100%; margin-bottom: 50px;">
+  <h2 style="font-weight: 800; font-size: 1.8rem; margin-bottom: 25px; color: #111; text-align: left;">
+    ⚡ Current Projects
+  </h2>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px;">
+  
+
+  <!-- CARD 1: Cornell Mars Rover End Effector -->
+<a href="{{ '/projects/cmr-end-effector/' | relative_url }}" class="hover-lift" style="text-decoration: none; color: inherit; border: 1px solid #e0e0e0; border-radius: 12px; overflow: hidden; background: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.05); display: flex; flex-direction: column; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+  <img src="{{ '/assets/images/EndEffector/EndEffector.jpg' | relative_url }}" alt="Cornell Mars Rover End Effector" style="width: 100%; height: 220px; object-fit: cover;" />
+  <div style="padding: 20px; display: flex; flex-direction: column; flex-grow: 1;">
+    <span style="display: inline-block; background: #28a745; color: white; font-size: 0.75rem; font-weight: bold; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; width: fit-content; margin-bottom: 10px;">Active Focus</span>
+    <h3 style="font-weight: 800; font-size: 1.35rem; margin: 0 0 10px 0; color: #111;">
+      Cornell Mars Rover End Effector
+    </h3>
+    <p style="color: #555; font-size: 0.95rem; line-height: 1.5; margin-bottom: 20px; flex-grow: 1;">
+      Redesign and physical prototyping of a 6-DOF arm end effector. Features skeleton-reinforced molded silicone grippers, dual PETG target laser clamping mounts, CubeMars motor interfacing, and key-clicking mechanism development.
+    </p>
+    <div style="margin-top: auto; color: #900c3f; font-weight: bold; font-size: 0.95rem;">
+      View Project Details →
+    </div>
+  </div>
+</a>
+
+  <!-- CARD 2: Personal Rocket Engine -->
+  <div style="border: 1px solid #e0e0e0; border-radius: 12px; overflow: hidden; background: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+    <img src="{{ '/assets/images/RocketEngine/Inj&CC.png' | relative_url }}" alt="LOX/RP-1 Liquid Rocket Engine" style="width: 100%; height: 220px; object-fit: cover;" />
+    <div style="padding: 20px; display: flex; flex-direction: column; flex-grow: 1;">
+      <span style="display: inline-block; background: #ffc107; color: #111; font-size: 0.75rem; font-weight: bold; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; width: fit-content; margin-bottom: 10px;">Phase I Complete</span>
+      <h3 style="font-weight: 800; font-size: 1.35rem; margin: 0 0 10px 0; color: #111;">
+        5 kN LOX/RP-1 Liquid Rocket Engine
+      </h3>
+      <p style="color: #555; font-size: 0.95rem; line-height: 1.5; margin-bottom: 20px; flex-grow: 1;">
+        5 kN thrust chamber architecture featuring an 80-channel regenerative cooling jacket, unlike-triplet impinging injector, and multi-phase CHT CFD validation in ANSYS Fluent.
+      </p>
+      
+      <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+        <a href="{{ '/projects/2026-Rocket-Engine/injector/' | relative_url }}" class="hover-lift" style="background: #900c3f; color: white; padding: 6px 12px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 0.85rem;">Injector →</a>
+        <a href="{{ '/projects/2026-Rocket-Engine/cc-nozzle/' | relative_url }}" class="hover-lift" style="background: #900c3f; color: white; padding: 6px 12px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 0.85rem;">CC & Nozzle →</a>
+        <a href="{{ '/projects/2026-Rocket-Engine/full-assembly/' | relative_url }}" class="hover-lift" style="background: #900c3f; color: white; padding: 6px 12px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 0.85rem;">Assembly →</a>
+      </div>
+    </div>
+  </div>
+
+  </div>
+</div>
+ {%comment%}
 <!-- High-Impact Machined Crimson Centered Gradient Header Area -->
   <div style="margin-bottom: 35px; width: 100%; text-align: center;">
     <h2 style="font-size: 2.8rem; font-weight: 900; margin: 0; text-transform: uppercase; letter-spacing: 2px;
@@ -17,7 +67,7 @@ permalink: /projects/
     </h2>
     <div style="height: 4px; width: 100%; background: linear-gradient(to right, #dd1c1a, #900c3f, #4a001f); margin-top: 12px; margin-bottom: 40px; border-radius: 2px;"></div>
   
-  
+ 
   <!-- Scaled-Up Premium Showcase Block (No loop required) -->
 <div class="featured-item" style="margin-bottom: 50px; width: 100%; border: 2px solid #dcdcdc; padding: 25px; border-radius: 18px; background-color: #85e5ff; box-sizing: border-box;">
   
@@ -66,10 +116,10 @@ permalink: /projects/
       Full System Assembly ➔
     </a>
   </div>
-
-</div>
 </div>
 
+</div>
+{%endcomment%}
 <hr style="margin: 40px 0; border: none; border-top: 1px solid #ddd; clear: both;">
 
 <!-- 2. FOUNDATIONAL PROJECTS (BOTTOM SECTION) -->
@@ -79,7 +129,7 @@ permalink: /projects/
   <div class="gallery-container">
     <div class="project-gallery">
       {% for project in site.projects %}
-        {% unless project.featured == true %}
+        {% unless project.current == true %}
           <div class="gallery-item">
             <a href="{{ project.url | relative_url }}">
               <img src="{{ project.image | relative_url }}" alt="{{ project.title }}" />

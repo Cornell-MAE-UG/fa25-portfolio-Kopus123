@@ -5,6 +5,7 @@ description: Combustion Chamber and Nozzle Design with CHT Analysis
 image: /assets/images/RocketEngine/NozzleFull.png
 permalink: /projects/2026-Rocket-Engine/cc-nozzle/
 technologies: [Autodesk Fusion 360, ANSYS Fluent, SpaceClaim, RPA, NASA CEA]
+current: true
 ---
 <div style="text-align: center; padding-bottom: 25px">
   <em>Click to enlarge images</em>
@@ -50,7 +51,7 @@ technologies: [Autodesk Fusion 360, ANSYS Fluent, SpaceClaim, RPA, NASA CEA]
     <li><strong>Expansion Ratio (ε):</strong> 4.9</li>
     <li><strong>Throat Diameter:</strong> 39.4 mm (Area: 12.22 cm²) &nbsp;|&nbsp; <strong>Chamber Diameter:</strong> 73.8 mm &nbsp;|&nbsp; <strong>Total Length:</strong> 406 mm</li>
     <li><strong>Nozzle Contour:</strong> 80% Rao bell nozzle (θn = 23°, θe = 13°), chosen over a full conical nozzle to reduce length and weight while retaining most of the ideal expansion efficiency.</li>
-    <li><strong>Cooling Architecture:</strong> Counter-flow regenerative cooling channels utilizing RP-1 as the working fluid, with <strong>60 cooling channels</strong> and a <strong>0.5mm inner wall thickness</strong>, running through the entire chamber and nozzle. 15% of the fuel mass flow is diverted to internal <strong>film cooling</strong> — while a 10% diversion theoretically satisfied thermal margins, 15% was selected both for additional thermal margin and for <strong>Design for Manufacturability (DFM)</strong>, ensuring film cooling orifice diameters remained large enough for reliable, cost-effective machining.</li>
+    <li><strong>Cooling Architecture:</strong> Counter-flow regenerative cooling channels utilizing RP-1 as the working fluid, with <strong>80 cooling channels</strong> and a <strong>0.5mm inner wall thickness</strong>, running through the entire chamber and nozzle. 15% of the fuel mass flow is diverted to internal <strong>film cooling</strong> — while a 10% diversion theoretically satisfied thermal margins, 15% was selected both for additional thermal margin and for <strong>Design for Manufacturability (DFM)</strong>, ensuring film cooling orifice diameters remained large enough for reliable, cost-effective machining.</li>
     <li><strong>Material:</strong> The chamber is modeled as a monocoque <strong>CuCrZr (Copper Chromium Zirconium)</strong> structure. This copper alloy was selected to maximize thermal conductivity, allowing rapid heat transfer from the hot-gas side to the regenerative coolant to prevent localized melting, while retaining structural yield strength at elevated operational temperatures.</li>
   </ul>
 

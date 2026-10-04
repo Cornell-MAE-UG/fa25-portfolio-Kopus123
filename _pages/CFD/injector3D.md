@@ -4,7 +4,7 @@ title: 3D Ursa I Injector CFD
 permalink: /analysis/Injector3D/
 description: "Three-dimensional transient multiphase CFD of LPC's Ursa I injector"
 technologies: [Spaceclaim, ANSYS Fluent, ANSYS CFD-Post]
-published: False
+Published: True
 ---
 
 **Objective:** <hr>

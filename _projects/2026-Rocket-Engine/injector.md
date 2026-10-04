@@ -4,7 +4,8 @@ title: Rocket Engine Injector
 description: Injector
 image: /assets/images/RocketEngine/inj-render.png
 permalink: /projects/2026-Rocket-Engine/injector/
-technologies: [Autodesk Fusion 360, Ansys Fluent, Ansys Fluent Meshing, SpaceClaim, Research Papers (Sp-125, sp8089, etc.), Google Sheets]
+technologies: [Autodesk Fusion 360, Ansys Fluent, Ansys Fluent Meshing, Ansys Mechanical Meshing and Solver, SpaceClaim, Research Papers (Sp-125, sp8089, etc.), Google Sheets]
+current: true
 ---
 <div style= "text-align: center; padding-bottom: 25px">
   <em>Click to enlarge images</em>
@@ -69,7 +70,10 @@ technologies: [Autodesk Fusion 360, Ansys Fluent, Ansys Fluent Meshing, SpaceCla
     <li>Made with <strong>Inconel 718</strong> due to its exceptional aerospace applications and thermal resistance</li>
   </ul>
 
+  
+  
   <div style="display: flex; gap: 20px; margin-bottom: 40px; flex-wrap: wrap; justify-content: center;">
+  {%comment%} <!-- OLD IMAGES-->
     <div style="flex: 1; min-width: 300px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
       <img src="{{ '/assets/images/RocketEngine/inj-render.png' | relative_url }}" alt="Injector Render" style="width: 100%; display: block;" />
       <p style="text-align: center; font-size: 0.9rem; padding: 10px; margin: 0; background: #f9f9f9;">Full Injector Render</p>
@@ -78,15 +82,46 @@ technologies: [Autodesk Fusion 360, Ansys Fluent, Ansys Fluent Meshing, SpaceCla
       <img src="{{ '/assets/images/RocketEngine/inj-faceplate.png' | relative_url }}" alt="Injector Faceplate" style="width: 100%; display: block;" />
       <p style="text-align: center; font-size: 0.9rem; padding: 10px; margin: 0; background: #f9f9f9;">Injector Faceplate</p>
     </div>
+    {%endcomment%} <!--END OLD IMAGES-->
     <div style="flex: 1; min-width: 300px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
       <img src="{{ '/assets/images/RocketEngine/inj-cross-sec.png' | relative_url }}" alt="Injector Cross Section" style="width: 100%; display: block;" />
-      <p style="text-align: center; font-size: 0.9rem; padding: 10px; margin: 0; background: #f9f9f9;">Injector Cross Section</p>
+      <p style="text-align: center; font-size: 0.9rem; padding: 10px; margin: 0; background: #f9f9f9;">Injector Cross Section (old)</p>
     </div>
   </div>
 
 
+<!-- FEA GOES HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+<h4>ii. FEA Analysis</h4>
+<ul style = "margin-bottom: 50px;">
+<li>I decided to run a transient thermal FEA simulation on the injector to ensure that the propellants stay in their proper phases thorughout the injector</li>
+<li>The mesh contained over 6 million cells to accomodate for the many small features in my injector, such as the orifices</li>
+<li>I found from a 15 sec burntime that, within only a few seconds, the bottom of the LOX dome reaches over 150 K, which would consequently boil the LOX entering the orifices and would ruin the mass flow entering the chamber
+<ul><li>Therefore, the FEA proved that I need some sort of cooling mechanism to keep the LOX dome cool enough</li></ul></li>
+<li>The FEA also revealed that the injector faceplate reaches past its melting point up halfway to the injector after the burn, so I decided to add a thermal coating on the faceplate to prevent this (details still in the works)</li>
+</ul>
+
+<div style="flex: 1; min-width: 300px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+      <img src="{{ '/assets/images/RocketEngine/featemps.png' | relative_url }}" alt="Injector Cross Section" style="width: 100%; display: block;" />
+      <p style="text-align: center; font-size: 0.9rem; padding: 10px; margin: 0; background: #f9f9f9;">FEA temperature results</p>
+    </div>
+
+<h4>iii. New injector features</h4>
+<ul style = "margin-bottom: 50px;">
+    <li>Injector now has one additional section: a LOX cooling section that absorbs heat from downstream and boils the LOX and vents it through a choked orifice sized for .8 kg/s of GOX</li>
+    <li>Housing for the ASI has also been incorporated</li>
+    <li>Number of regen channels has gone up from 60 to 80 (elaborated on in the nozzle page)</li>
+</ul>
+
+<div style="flex: 1; min-width: 300px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+      <img src="{{ '/assets/images/RocketEngine/injCSnew.png' | relative_url }}" alt="Injector Cross Section" style="width: 100%; display: block;" />
+      <p style="text-align: center; font-size: 0.9rem; padding: 10px; margin: 0; background: #f9f9f9;">Injector Cross Section (new)</p>
+    </div>
+
+
+
+
   <h3 style="color: #000000; font-weight: 800; font-size: 1.5rem; margin-bottom: 15px; padding-bottom: 5px;">
-    2. Transient Multi-Phase CFD (ANSYS Fluent)
+    2. Transient Multi-Phase CFD (ANSYS Fluent, Older Injector Design)
   </h3>
   <p>
     To validate the impingement, a transient cold-flow simulation was executed.
@@ -156,14 +191,21 @@ technologies: [Autodesk Fusion 360, Ansys Fluent, Ansys Fluent Meshing, SpaceCla
   <ul style="margin-bottom: 25px;">
     <li>This was my first VOF-to-DPM simulation that I have ran, and it was more to figure out the mechanics of the setup. Therefore, there are some improvements necessary.</li>
     <li><strong>Atomization Quality:</strong> The VOF-to-DPM simulation did characterize impingement going along the axis of the chamber, but due to the coarse mesh, none of it was converted into particles for the DPM. This did not produce incorrect results for the impingement, but the coarse mesh likely reduced accuracy but increased computation time.</li>
-    <li><strong>Velocities:</strong> Velocity volume renderings and vectors show that the speed inside the orifices were faster than normal (around 50 m/s in the orifices compared to the calculated ~30 m/s), which I think could be a result of 1) no AMR and 2) a high gradient between the air and propellant phases (causes a large velocity artifact for the air phase, which in turn causes a higher mass flow and velocity for propellant phases)
-      <ul>
-      <li>I have seen in previous simulations air artifact velocity being extraordinarily high (1200+ m/s), causing propellants in the orifices to reach speeds of over 100 m/s, but I presume, due to my boundary layers with an estimate of y+ = 30, the solver was able to capture more of the physics accurately and did not produce absurdly large velocity artifacts, though there is room for improvement in this simulation</li></ul></li>
+    <li><strong>Velocities:</strong> Velocity volume renderings and vectors show that the speed inside the orifices were faster than normal (around 50 m/s in the orifices compared to the calculated ~30 m/s), which I think could be a result of 1) no AMR and 2) a high gradient between the air and propellant phases (causes a large velocity artifact for the air phase, which in turn causes a higher mass flow and velocity for propellant phases)</li>
     <li><strong>Pressure:</strong> The pressure volume render shows an odd distribution of pressure, with a large pressure gradient at the inlet and virtually no pressure gradient elsewhere, leaving no pressure drop across the orifices. This is undoubtedly caused by the lack of manifolds in the geometry, and in my next simulation I will model the volume of the manifolds as well to acquire an accurate simulation.</li>
   </ul>
-  <p style = "margin-bottom:25px"><strong>A new simulation simulating the entire injector geometry (not just the faceplate, and not periodic) is coming soon to properly validate the design of the injector</strong></p>
+  <p style = "margin-bottom:25px"><strong>A new simulation simulating the entire new injector geometry is coming soon to properly validate the design of the injector</strong></p>
 
 </div>
+
+<h4>
+  iv. Future Changes and Considerations
+  </h4>
+  <ul>
+  <li>Ideas for the thermal coating on the faceplate need to be finalized, or a new solution must be found to prevent half of the faceplate melting during the burn</li>
+  <li>A CFD simulation (even simple) must be run to ensure the manifolds work as intended. Impingement has been verified so in that simulation I could disregard the impingement and use the orifices as outlets</li>
+  <li>There is currently a very small wall between the LOX orifices and the RP-1 manifolds, which are too small to fit an o-ring to prevent mixing. An alternate solution must be found or the geometry must change to accomodate for an o-ring</li>
+  </ul>
 
 <style>
   #modalImg {

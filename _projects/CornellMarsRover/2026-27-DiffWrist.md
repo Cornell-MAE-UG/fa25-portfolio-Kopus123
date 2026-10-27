@@ -32,10 +32,10 @@ current: true
 <div class="summary-box">
   <h4>At a Glance</h4>
   <ul>
-    <li><strong>Problem:</strong> the rover arm's wrist roll motor can't meet its torque requirement, and last year's differential wrist was abandoned over backlash</li>
+    <li><strong>Problem:</strong> last year's differential wrist was shelved over backlash. I wanted to see whether a gear with rolling contact could remove that backlash while adding torque margin.</li>
     <li><strong>What I did:</strong> designed a differential wrist around a custom gear with rolling contact and no designed-in backlash. I generated the tooth geometry numerically when no published equations existed, then took it through three CAD revisions and two 3D-printed prototypes.</li>
     <li><strong>Result:</strong> the printed prototype drives pitch, roll, and combined motion on two motors (video below)</li>
-    <li><strong>Status:</strong> self-directed backup to the team's planned wrist (owned by other members), to be presented at FDR. Next step is a machined crown for real backlash measurement.</li>
+    <li><strong>Status:</strong> independent R&amp;D project, concluded at the 3D-printed prototype stage. The team is keeping its planned segregated wrist (owned by other members) for the 2027 rover.</li>
   </ul>
   <div class="summary-stats">
     <span><strong>1.42×</strong> roll torque multiplier</span>
@@ -60,14 +60,14 @@ current: true
 </div>
 
 ### 1. Why a Differential
-<p>In a differential, two identical motors drive both wrist axes together, so their torques add on whichever axis needs it (so twice the torque is achieved compared to a segregated wrist if the same motors are used). That fixes the roll shortfall without heavier motors.</p>
+<p>In a differential, two identical motors drive both wrist axes together, so their torques add on whichever axis needs it (so twice the torque is achieved compared to a segregated wrist if the same motors are used). That adds torque margin without heavier motors.</p>
 
 <details class="deep-dive">
-<summary>Requirements and torque math</summary>
+<summary>Motors and torque math</summary>
 <p>The arm's current wrist has two degrees of freedom but is not a differential. Each axis has its own motor:</p>
 <ul>
-<li><strong>Pitch:</strong> CubeMars AK60-39 (24 Nm nominal / 72 Nm peak), requirement 12 Nm</li>
-<li><strong>Roll:</strong> CubeMars AK45-36 (8 Nm nominal / 24 Nm peak), requirement 10.7 Nm, so the roll motor's nominal torque falls short</li>
+<li><strong>Pitch:</strong> CubeMars AK60-39 (24 Nm nominal / 72 Nm peak)</li>
+<li><strong>Roll:</strong> CubeMars AK45-36 (8 Nm nominal / 24 Nm peak), which the team considers sufficient</li>
 </ul>
 <ul>
 <li><strong>Pitch</strong> (motors turn the same way): τ<sub>pitch</sub> = τ<sub>L</sub> + τ<sub>R</sub></li>
@@ -95,7 +95,7 @@ current: true
 <ul>
 <li><strong>Common apex:</strong> every cone (the crown, both roller wheels, and every roller) has its tip at one point. That's the only arrangement where the gears roll without slipping along the entire contact line.</li>
 <li><strong>Conical rollers instead of cylindrical pins:</strong> a cone whose tip is at the apex rolls along a tooth instead of sliding on it. It also allows preload with a single shim: moving the output gear toward the apex wedges the rollers into both mating gears at once.</li>
-<li><strong>17:12 tooth count (1.417× roll multiplier):</strong> gives margin over the 10.7 Nm roll requirement. The counts are coprime (a "hunting tooth" pair), so every roller eventually meets every tooth, which averages out manufacturing error and spreads wear.</li>
+<li><strong>17:12 tooth count (1.417× roll multiplier):</strong> adds roll torque margin. The counts are coprime (a "hunting tooth" pair), so every roller eventually meets every tooth, which averages out manufacturing error and spreads wear.</li>
 <li><strong>Crown on the output, roller wheels on the motors:</strong> my first layout put crowns on the motors, which forced a steep crown with large, spiky teeth. Swapping the roles (like the spider gear in a car differential) keeps the same roll ratio while making the crown the large, flat gear, and it means only one hard-to-make crown.</li>
 <li><strong>Material:</strong> Hertz contact stress calculations showed a 6061 aluminum crown would yield under wrist loads, so the machined crown needs to be hardened steel. Hand calculations also showed the roller pins must be supported at both ends rather than cantilevered.</li>
 </ul>
@@ -221,13 +221,23 @@ current: true
 
 ---
 
-### 6. Next Steps
+### 6. Outcome &amp; What I Learned
+<p>The team is keeping its planned segregated wrist for the 2027 rover, so I concluded the project at the 3D-printed prototype stage and am focusing on the <a href="{{ '/projects/cmr-end-effector/' | relative_url }}">end effector</a>.</p>
 <ul>
-<li>Re-run torque requirement calculations to decide whether a 1:1 ratio (smaller crown, narrower wrist) is enough</li>
-<li>Fix the roller-gear nut retention and the top-plate flex; run FEA on the slotted roller shaft</li>
-<li>Machine the crown (hardened steel on the 5-axis mill or outsourced), fit real bearings, then measure backlash with a .2 m long stick that is attached to the EE interfacing plate</li>
-<li>Present at FDR as a backup to the planned segregated wrist</li>
+<li><strong>Stiffness matters as much as tooth shape:</strong> nearly all the backlash in the prototypes came from the structure (plate flex, shaft clearance, the spider block twisting), not the gear geometry</li>
+<li><strong>Design for assembly early:</strong> V1 couldn't be assembled at all. Splitting the differential plate and switching to a spider block is what made the design buildable.</li>
+<li><strong>Gear geometry from first principles:</strong> with no published equations for this gear, I generated the teeth numerically with an envelope method and checked them for interference</li>
+<li><strong>Print early:</strong> three CAD revisions and two prints in about a week; every print exposed problems the CAD didn't</li>
+<li><strong>Pin down requirements first:</strong> the torque requirement that motivated the extra roll multiplier was never firmly settled. Confirming it up front would have shown whether a simpler 1:1 ratio (smaller crown, narrower wrist) was enough.</li>
 </ul>
+<details class="deep-dive">
+<summary>What a continuation would need</summary>
+<ul>
+<li>Fix the roller-gear nut retention and the top-plate flex; run FEA on the slotted roller shaft</li>
+<li>Machine the crown (hardened steel on the 5-axis mill or outsourced) and fit real bearings</li>
+<li>Measure backlash with a 0.2 m stick attached to the EE interfacing plate</li>
+</ul>
+</details>
 
 <div id="imageModal" class="modal">
   <span class="close-btn">&times;</span>

@@ -26,7 +26,7 @@ excerpt_separator: ""
       Cornell Mars Rover End Effector
     </h3>
     <p style="color: #555; font-size: 0.95rem; line-height: 1.5; margin-bottom: 20px; flex-grow: 1;">
-      Redesign and physical prototyping of a 6-DOF arm end effector. Features skeleton-reinforced molded silicone grippers, dual PETG target laser clamping mounts, CubeMars motor interfacing, and key-clicking mechanism development.
+      Redesign and physical prototyping of a 6-DOF arm end effector. Features skeleton-reinforced molded silicone grippers, dual PETG target laser clamping mounts, CubeMars motor interfacing, and key-clicking mechanism development. <strong>Next up: a major redesign for serviceability.</strong>
     </p>
     <div style="margin-top: auto; color: #900c3f; font-weight: bold; font-size: 0.95rem;">
       View Project Details →
@@ -38,7 +38,7 @@ excerpt_separator: ""
 <a href="{{ '/projects/cmr-diff-wrist/' | relative_url }}" class="hover-lift" style="text-decoration: none; color: inherit; border: 1px solid #e0e0e0; border-radius: 12px; overflow: hidden; background: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.05); display: flex; flex-direction: column; transition: transform 0.2s ease, box-shadow 0.2s ease;">
   <img src="{{ '/assets/images/DiffWrist/prototype.jpg' | relative_url }}" alt="Roller-Crown Differential Wrist" style="width: 100%; height: 220px; object-fit: cover;" />
   <div style="padding: 20px; display: flex; flex-direction: column; flex-grow: 1;">
-    <span style="display: inline-block; background: #28a745; color: white; font-size: 0.75rem; font-weight: bold; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; width: fit-content; margin-bottom: 10px;">Active Focus</span>
+    <span style="display: inline-block; background: #6c757d; color: white; font-size: 0.75rem; font-weight: bold; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; width: fit-content; margin-bottom: 10px;">Independent R&amp;D · Concluded</span>
     <h3 style="font-weight: 800; font-size: 1.35rem; margin: 0 0 10px 0; color: #111;">
       Roller-Crown Differential Wrist
     </h3>

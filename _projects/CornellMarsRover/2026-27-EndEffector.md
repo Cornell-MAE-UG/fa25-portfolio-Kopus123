@@ -35,7 +35,7 @@ current: true
     <li><strong>Problem:</strong> last year's end effector had a key clicker that broke, grippers too soft for heavy objects, and parts that failed on impact</li>
     <li><strong>What I did:</strong> redesigned the grippers (skeleton-reinforced molded silicone), added laser aiming mounts and claw hard stops, designed the new motor interface, and evaluated key-clicker concepts down to a linear actuator</li>
     <li><strong>Result:</strong> the prototype picks up a 5.94 kg cache (above the 5 kg competition limit), plus a mallet, hammer, and power tool</li>
-    <li><strong>Status:</strong> finishing CAD (actuator mount, top plate, TOF sensor), then testing on the arm</li>
+    <li><strong>Status:</strong> starting a major redesign for serviceability so any part can be reached without tearing down the whole EE, alongside finishing CAD (actuator mount, top plate, TOF sensor) and testing on the arm</li>
   </ul>
   <div class="summary-stats">
     <span><strong>5.94 kg</strong> cache lifted (5 kg required)</span>
@@ -245,13 +245,22 @@ current: true
 ---
 
 ### 7. Design Reviews & Next Steps
+<div class="summary-box">
+  <h4>Upcoming: Serviceability Redesign</h4>
+  <p style="margin: 0 0 10px 0;">In the current EE, nearly every component attaches to another, so servicing one part means removing many others. The next major revision restructures the EE so components can be reached and replaced independently.</p>
+  <ul>
+    <li>Rework how subassemblies mount to each other so each one can come off on its own</li>
+    <li>Expect significant changes throughout the EE, not just to individual parts</li>
+    <li>Keep the proven features (skeleton grippers, rack and pinion, laser/TOF aiming) while making them faster to service</li>
+  </ul>
+</div>
 <ul>
 <li><strong>CDR feedback:</strong> a time-of-flight (TOF) sensor would likely work better than lasers for precise grasping, since it reports back actual distance (good for the new key insert task). Extrapolating distance from lasers is much more difficult. I plan to switch to a TOF sensor.</li>
 <li>Finish the EE CAD (sheet-metal linear actuator mount, redesigned top plate with laser holes, CubeMars interface plate), then test the EE extensively on the arm</li>
 <li>Find the optimal skeleton volume and silicone grade for the best all-round grip, including tests against non-skeleton grippers and different skeleton sizes</li>
 <li>Add camera mounts and interfacing plate with current wrist (already interfaced with my differential wrist)</li>
 <li>Continue rapid prototyping by 3D printing so testing, rather than analysis alone, confirms function</li>
-<li>Related: I'm also developing a <a href="{{ '/projects/cmr-diff-wrist/' | relative_url }}">roller-crown differential wrist</a> for the arm</li>
+<li>Related: I also designed and prototyped a <a href="{{ '/projects/cmr-diff-wrist/' | relative_url }}">roller-crown differential wrist</a> for the arm</li>
 </ul>
 
 <div id="imageModal" class="modal">

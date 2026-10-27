@@ -29,7 +29,7 @@ permalink: /analysis/
       <a href="{{ '/analysis/cfd/' | relative_url }}" class="text-decoration-none text-dark">
         <div class="simulation-card p-3">
           <img 
-          src="{{ '/assets/images/CFDhead.png'| relative_url }}" 
+          src="{{ '/assets/images/Ursa3DCFD/JuicyVolFrac.png'| relative_url }}" 
           class="img-fluid mb-4" 
           alt="CFD"
           style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: center;">

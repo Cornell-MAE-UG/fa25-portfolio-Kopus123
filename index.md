@@ -13,7 +13,7 @@ title: Ahmed Arif
            class = "profile-image">
     </td>
     <td style="vertical-align: top; border: none; padding-left: 20px;">
-      My name is Ahmed Arif, and I am currently a Mechanical Engineering student at Cornell University (class of 2028). I am currently part of the Liquid Propulsion Club at Cornell and the Mars Rover project team. Projects from those teams, and my personal projects can be seen in the projects section. Currently, I am improving the design of the End Effector for Cornell Mars Rover. I am rapidly designing and prototyping various parts of the end effector and testing to ensure validity.
+      My name is Ahmed Arif, and I am currently a Mechanical Engineering student at Cornell University (class of 2028). I am currently part of the Liquid Propulsion Club at Cornell and the Mars Rover project team. Projects from those teams, and my personal projects can be seen in the projects section. Currently, I am improving the design of the End Effector for Cornell Mars Rover, rapidly designing, prototyping, and testing its parts. Alongside that, I am developing a zero-backlash roller-crown differential wrist for the rover's arm. I also have CFD work on the Liquid Propulsion Club's Ursa I injector in 2D and 3D, which can be found in the simulations section.
       <br><br>
     </td>
   </tr>
@@ -25,6 +25,9 @@ title: Ahmed Arif
   <div>
     <span class="fw-bold">Currently Working On:</span> 
     Cornell Mars Rover: 6-DOF Arm End Effector Redesign, Skeleton-Reinforced Silicone Grippers, Dual Laser Mounts, & a plethora of Hardware Testing
+    <br>
+    <span class="fw-bold">Also In Progress:</span> 
+    Roller-Crown Differential Wrist for the CMR arm (two 3D-printed prototypes built and tested; now running on motors)
     <br>
     <span class="fw-bold">Project Status:</span> 
     Personal LOX/RP-1 Rocket Engine: Paused (Chamber and Injector Sizing, initial CHT Analysis, and transient thermal FEA complete; ASI and plumbing integration remain)

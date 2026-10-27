@@ -14,7 +14,7 @@ excerpt_separator: ""
     ⚡ Current Projects
   </h2>
 
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px;">
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px;">
   
 
   <!-- CARD 1: Cornell Mars Rover End Effector -->
@@ -34,8 +34,25 @@ excerpt_separator: ""
   </div>
 </a>
 
-  <!-- CARD 2: Personal Rocket Engine -->
-  <div style="border: 1px solid #e0e0e0; border-radius: 12px; overflow: hidden; background: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+  <!-- CARD 2: Roller-Crown Differential Wrist -->
+<a href="{{ '/projects/cmr-diff-wrist/' | relative_url }}" class="hover-lift" style="text-decoration: none; color: inherit; border: 1px solid #e0e0e0; border-radius: 12px; overflow: hidden; background: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.05); display: flex; flex-direction: column; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+  <img src="{{ '/assets/images/DiffWrist/prototype.jpg' | relative_url }}" alt="Roller-Crown Differential Wrist" style="width: 100%; height: 220px; object-fit: cover;" />
+  <div style="padding: 20px; display: flex; flex-direction: column; flex-grow: 1;">
+    <span style="display: inline-block; background: #28a745; color: white; font-size: 0.75rem; font-weight: bold; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; width: fit-content; margin-bottom: 10px;">Active Focus</span>
+    <h3 style="font-weight: 800; font-size: 1.35rem; margin: 0 0 10px 0; color: #111;">
+      Roller-Crown Differential Wrist
+    </h3>
+    <p style="color: #555; font-size: 0.95rem; line-height: 1.5; margin-bottom: 20px; flex-grow: 1;">
+      Zero-backlash 17:12 conical roller-pin bevel differential for the CMR arm, with computationally generated trochoidal teeth and a 1.42× roll torque multiplier. Three CAD revisions and two 3D-printed prototypes so far, now running on motors.
+    </p>
+    <div style="margin-top: auto; color: #900c3f; font-weight: bold; font-size: 0.95rem;">
+      View Project Details →
+    </div>
+  </div>
+</a>
+
+  <!-- CARD 3: Personal Rocket Engine (spans the full row below the CMR cards) -->
+  <div style="grid-column: 1 / -1; border: 1px solid #e0e0e0; border-radius: 12px; overflow: hidden; background: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
     <img src="{{ '/assets/images/RocketEngine/Inj&CC.png' | relative_url }}" alt="LOX/RP-1 Liquid Rocket Engine" style="width: 100%; height: 220px; object-fit: cover;" />
     <div style="padding: 20px; display: flex; flex-direction: column; flex-grow: 1;">
       <span style="display: inline-block; background: #ffc107; color: #111; font-size: 0.75rem; font-weight: bold; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; width: fit-content; margin-bottom: 10px;">Phase I Complete</span>

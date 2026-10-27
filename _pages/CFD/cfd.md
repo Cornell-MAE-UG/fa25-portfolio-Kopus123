@@ -10,11 +10,10 @@ permalink: /analysis/cfd/
   <hr>
 
   <div class="d-flex flex-column gap-3">
-  {%comment%}
     <a href="{{ '/analysis/Injector3D/' | relative_url }}" 
    class="list-group-item list-group-item-action d-flex align-items-center gap-3 p-3 rounded-3 ghost-card">
   <img 
-  src="{{ '/assets/images/Ursa3DInjectorCFD.jpg' | relative_url }}" 
+  src="{{ '/assets/images/Ursa3DCFD/JuicyVolFrac.png' | relative_url }}" 
   alt="Ursa I 3D Injector" 
   width="100" 
   height="100" 
@@ -27,7 +26,6 @@ permalink: /analysis/cfd/
     </div>
   </div>
 </a>
-{%endcomment%}
     <a href="{{ '/analysis/Injector2D/' | relative_url }}" 
    class="list-group-item list-group-item-action d-flex align-items-center gap-3 p-3 rounded-3 ghost-card">
   <img 

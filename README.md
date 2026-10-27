@@ -11,6 +11,7 @@ I am a Mechanical Engineering undergraduate at Cornell University (Class of 2028
 * **Languages & Tools:** Python, MATLAB, ANSYS, Fusion 360, OpenRocket.
 * **Key Projects:**
     * **CMR End Effector:** Design for the 2026-27 year's end effector on the 6 DOF arm on Cornell Mars Rover
+    * **CMR Differential Wrist:** Zero-backlash roller-crown (conical roller-pin bevel) differential wrist for the rover arm, with computationally generated tooth geometry
     * **5 kN LOX/RP-1 Engine:** Full thrust chamber and injector design — regenerative/film cooling analysis, unlike-triplet injector sizing, and CFD validation (Fluent, RPA).
     * **Ursa I Engine (LPC):** CFD simulations for the club's 500 N bipropellant rocket engine.
 

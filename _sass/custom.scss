@@ -323,3 +323,92 @@ h3 {
   clear: both;
   padding-top: 10px; 
 }
+
+/* --- Project summary box (top of project pages) --- */
+.summary-box {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-left: 5px solid #900c3f;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 18px 22px;
+  margin: 10px 0 35px 0;
+}
+.summary-box h4 {
+  font-weight: 800;
+  margin: 0 0 12px 0;
+}
+.summary-box ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+.summary-box li {
+  margin-bottom: 6px;
+}
+.summary-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+.summary-stats span {
+  background: #f3f3f3;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 0.9rem;
+}
+.summary-stats strong {
+  color: #900c3f;
+}
+
+/* --- Click-to-expand detail sections --- */
+details.deep-dive {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fff;
+  margin: 10px 0 30px 0;
+  padding: 0 16px;
+}
+details.deep-dive > summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: #900c3f;
+  padding: 12px 0;
+}
+details.deep-dive[open] > summary {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 12px;
+}
+
+/* --- Data tables on project pages --- */
+.table-wrap {
+  overflow-x: auto;
+  margin: 15px 0 25px 0;
+}
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 0.95rem;
+}
+.spec-table th {
+  background: #900c3f;
+  color: #fff;
+  font-weight: 700;
+  text-align: left;
+  padding: 10px 14px;
+}
+.spec-table td {
+  padding: 9px 14px;
+  border-top: 1px solid #e8e8e8;
+  vertical-align: top;
+}
+.spec-table tr:nth-child(even) td {
+  background: #f7f7f7;
+}
+.spec-table td:first-child {
+  font-weight: 700;
+}

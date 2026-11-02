@@ -43,7 +43,7 @@ excerpt_separator: ""
       Roller-Crown Differential Wrist
     </h3>
     <p style="color: #555; font-size: 0.95rem; line-height: 1.5; margin-bottom: 20px; flex-grow: 1;">
-      Zero-backlash 17:12 conical roller-pin bevel differential for the CMR arm, with computationally generated trochoidal teeth and a 1.42× roll torque multiplier. Three CAD revisions and two 3D-printed prototypes so far, now running on motors.
+      Zero-backlash 17:12 conical roller-pin bevel differential for the CMR arm, with computationally generated trochoidal teeth and a 1.42× roll torque multiplier. Three CAD revisions and two 3D-printed prototypes; the final print ran on motors and measured just 2.88 arcmin of roll backlash.
     </p>
     <div style="margin-top: auto; color: #900c3f; font-weight: bold; font-size: 0.95rem;">
       View Project Details →

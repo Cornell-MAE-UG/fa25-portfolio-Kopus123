@@ -1,9 +1,10 @@
 ---
 layout: project
 title: Fluid-Mechanical Dissection
-description: Dissection of a device and video explanation of the fluid mechanics behind how it works.
+description: Dissection of a device and the fluid mechanics behind how it works.
 permalink: /projects/fluid-mechanical-dissection/
 image: /assets/images/FluidMechDissection/placeholder.svg
+hide_header_image: true
 technologies: [TBD]
 ---
 
@@ -20,8 +21,5 @@ technologies: [TBD]
 ### 3. Fluid Mechanics Principles
 <p>Coming soon.</p>
 
-### 4. Video Explanation
-<p>Coming soon.</p>
-
-### 5. Analysis & Reflection
+### 4. Analysis & Reflection
 <p>Coming soon.</p>

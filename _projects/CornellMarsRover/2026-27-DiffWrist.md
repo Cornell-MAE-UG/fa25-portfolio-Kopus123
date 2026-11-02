@@ -34,10 +34,11 @@ current: true
   <ul>
     <li><strong>Problem:</strong> last year's differential wrist was shelved over backlash. I wanted to see whether a gear with rolling contact could remove that backlash while adding torque margin.</li>
     <li><strong>What I did:</strong> designed a differential wrist around a custom gear with rolling contact and no designed-in backlash. I generated the tooth geometry numerically when no published equations existed, then took it through three CAD revisions and two 3D-printed prototypes.</li>
-    <li><strong>Result:</strong> the printed prototype drives pitch, roll, and combined motion on two motors (video below)</li>
+    <li><strong>Result:</strong> the printed prototype drives pitch, roll, and combined motion on two motors (video below), and its gear mesh measured just 2.88 arcmin of roll backlash</li>
     <li><strong>Status:</strong> independent R&amp;D project, concluded at the 3D-printed prototype stage. The team is keeping its planned segregated wrist (owned by other members) for the 2027 rover.</li>
   </ul>
   <div class="summary-stats">
+    <span><strong>2.88 arcmin</strong> roll backlash, 3D-printed</span>
     <span><strong>1.42×</strong> roll torque multiplier</span>
     <span><strong>0</strong> interference across the full mesh cycle</span>
     <span><strong>3</strong> CAD revisions + <strong>2</strong> prints in ~1 week</span>
@@ -195,11 +196,11 @@ current: true
 <div class="row mt-3 mb-4 justify-content-center">
   <div class="col-md-8 col-12 mb-4 text-center">
       <img src="{{ '/assets/images/DiffWrist/prototype.jpg' | relative_url }}" class="img-fluid border rounded" style="width: 100%; height: auto; display: block; cursor: zoom-in;" alt="Differential wrist hooked up to motors">
-    <p style="text-align: center; font-size: 0.9rem; padding: 10px; margin: 0; background: #f9f9f9;">Motor test rig (power and CAN-FD wires daisy chained from left to right; power supply not shown)</p>
+    <p style="text-align: center; font-size: 0.9rem; padding: 10px; margin: 0; background: #f9f9f9;">Motor test rig (power and CAN-FD wires daisy-chained from left to right; power supply not shown)</p>
   </div>
 </div>
 <ul>
-<li><strong>Flex:</strong> the printed structure is flimsy. The spider block twists when the roller gears are turned by hand, which shows up as backlash, so I can't isolate the backlash from the gear design until the parts are machined.</li>
+<li><strong>Flex:</strong> the printed structure is flimsy. The spider block twists when the roller gears are turned by hand, which shows up as backlash (measured in <a href="#6-backlash-testing">Backlash Testing</a> below).</li>
 <li><strong>Motion lag:</strong> movements sometimes kept going after the key was released. This may be the motors hitting a torque or speed limit, which needs investigation since the wrist is essentially unloaded.</li>
 <li><strong>Width:</strong> still the biggest drawback. A 1:1 ratio would shrink the crown, and correctly sized outer roller shafts (the printed ones were over twice as long as needed) would make it much narrower.</li>
 </ul>
@@ -221,10 +222,54 @@ current: true
 
 ---
 
-### 6. Outcome &amp; What I Learned
-<p>The team is keeping its planned segregated wrist for the 2027 rover, so I concluded the project at the 3D-printed prototype stage and am focusing on the <a href="{{ '/projects/cmr-end-effector/' | relative_url }}">end effector</a>.</p>
+### 6. Backlash Testing
+<p>The gear mesh measured just <strong>2.88 arcmin (0.048°) of backlash about the roll axis, even as a 3D print</strong>. Pitch backlash was much larger (2.17°), and I traced it to clearances and loose fasteners in the printed structure, not the gear design.</p>
+
+<div class="row mt-3 mb-4 justify-content-center">
+  <div class="col-md-6 col-12 mb-4 text-center">
+      <img src="{{ '/assets/images/DiffWrist/backlash_setup.jpg' | relative_url }}" class="img-fluid border rounded" style="width: 100%; height: auto; display: block; cursor: zoom-in;" alt="Test setup: roller wheels clamped in a vise, laser taped to a 0.2 m arm on the output">
+    <p style="text-align: center; font-size: 0.9rem; padding: 10px; margin: 0; background: #f9f9f9;">Test setup: roller wheels clamped in a vise, laser taped to a 0.2 m arm on the output</p>
+  </div>
+  <div class="col-md-6 col-12 mb-4 text-center">
+      <img src="{{ '/assets/images/DiffWrist/backlash_laser.jpg' | relative_url }}" class="img-fluid border rounded" style="width: 100%; height: auto; display: block; cursor: zoom-in;" alt="Laser spot on a wall 1.2 m from the pivot, with marked positions">
+    <p style="text-align: center; font-size: 0.9rem; padding: 10px; margin: 0; background: #f9f9f9;">Laser spot on a wall 1.2 m from the pivot, with marked positions</p>
+  </div>
+</div>
+
 <ul>
-<li><strong>Stiffness matters as much as tooth shape:</strong> nearly all the backlash in the prototypes came from the structure (plate flex, shaft clearance, the spider block twisting), not the gear geometry</li>
+<li><strong>Setup:</strong> the final 3D print had its roller wheels clamped in a vise so they couldn't turn, leaving only play in the gears and structure (the motors weren't involved). A laser taped to the end of a 0.2 m printed arm on the output projected onto a wall 1 m further away, giving a 1.2 m lever arm. Rocking the output back and forth moved the laser spot.</li>
+<li><strong>Why the laser:</strong> an earlier attempt with just a ruler at the end of the arm only showed a springing motion from the print deforming. At 1.2 m, the pure backlash was large enough to see separately from the springing.</li>
+<li><strong>Calculation:</strong> the spot moved 1 mm about the roll axis, so θ = s / r = 1 mm / 1.2 m ≈ 8.3 × 10<sup>−4</sup> rad ≈ 0.048° ≈ 2.88 arcmin. A machined version should reduce this further.</li>
+</ul>
+
+<div class="table-wrap">
+<table class="spec-table">
+  <tr><th>Axis</th><th>Measured backlash</th><th>Main source</th></tr>
+  <tr><td>Roll (crown axis)</td><td>0.048° (2.88 arcmin)</td><td>Gear mesh: very small for a 3D print</td></tr>
+  <tr><td>Pitch (roller axis)</td><td>2.17°</td><td>Printed structure: hole clearances and loose fasteners</td></tr>
+</table>
+</div>
+
+<p><strong>The pitch backlash is a prototype limitation, not a flaw in the gear design.</strong> It comes from the 3D-printed parts, large hole clearances (especially in the spider block), and screws the design didn't leave room to fully tighten (such as those holding the test arm to the crown). The clearances and loose screws are likely the biggest contributors, and each has a known fix in a machined version:</p>
+
+<div class="table-wrap">
+<table class="spec-table">
+  <tr><th>Fix for a machined version</th><th>What it solves</th></tr>
+  <tr><td>1. Machine in metal with tight tolerances</td><td>Print deformation and large hole clearances</td></tr>
+  <tr><td>2. Add pockets for the nuts</td><td>Lets the nuts be held and tightened fully</td></tr>
+  <tr><td>3. Tap the holes instead of using nuts</td><td>Removes loose nut joints (only reliable once machined)</td></tr>
+  <tr><td>4. Use pins instead of screws</td><td>Removes the remaining play in fastened joints</td></tr>
+</table>
+</div>
+
+<p>With these in place, I expect the pitch backlash could come down close to the roll axis level.</p>
+
+---
+
+### 7. Outcome &amp; What I Learned
+<p>The team is keeping its planned segregated wrist for the 2027 rover, so I concluded the project at the 3D-printed prototype stage. Machining would be costly and time-consuming for a design that isn't going on the arm, so I'm now focusing on the <a href="{{ '/projects/cmr-end-effector/' | relative_url }}">end effector</a>.</p>
+<ul>
+<li><strong>Stiffness matters as much as tooth shape:</strong> the gear mesh measured only 2.88 arcmin, while the printed structure (hole clearances, loose fasteners, the spider block twisting) allowed 2.17° about the other axis</li>
 <li><strong>Design for assembly early:</strong> V1 couldn't be assembled at all. Splitting the differential plate and switching to a spider block is what made the design buildable.</li>
 <li><strong>Gear geometry from first principles:</strong> with no published equations for this gear, I generated the teeth numerically with an envelope method and checked them for interference</li>
 <li><strong>Print early:</strong> three CAD revisions and two prints in about a week; every print exposed problems the CAD didn't</li>
@@ -233,9 +278,10 @@ current: true
 <details class="deep-dive">
 <summary>What a continuation would need</summary>
 <ul>
-<li>Fix the roller-gear nut retention and the top-plate flex; run FEA on the slotted roller shaft</li>
-<li>Machine the crown (hardened steel on the 5-axis mill or outsourced) and fit real bearings</li>
-<li>Measure backlash with a 0.2 m stick attached to the EE interfacing plate</li>
+<li>Machine the parts in metal with tight tolerances: a hardened-steel crown (5-axis mill or outsourced) and real bearings</li>
+<li>Add pockets for the nuts so they can be fully tightened, or tap the holes once the parts are machined</li>
+<li>Use pins instead of screws where possible to remove the remaining play</li>
+<li>Fix the top-plate flex and run FEA on the slotted roller shaft</li>
 </ul>
 </details>
 

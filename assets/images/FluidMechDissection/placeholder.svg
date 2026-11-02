@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#1f3b4d"/>
+  <g fill="none" stroke="#89ddff" stroke-width="6" stroke-linecap="round" opacity="0.85">
+    <path d="M40 230 C 200 170, 300 290, 420 230 S 640 170, 760 230"/>
+    <path d="M40 300 C 200 240, 300 360, 420 300 S 640 240, 760 300"/>
+    <path d="M40 370 C 200 310, 300 430, 420 370 S 640 310, 760 370"/>
+  </g>
+  <text x="400" y="130" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-size="46" font-weight="700" fill="#ffffff">Fluid-Mechanical Dissection</text>
+  <text x="400" y="500" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-size="32" fill="#ffc107">Coming Soon</text>
+</svg>
